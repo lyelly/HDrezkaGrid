@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name            HDrezkaGrid - График рейтингов
 // @namespace       HDrezkaGrid
+// @author          lyelly
 // @include         http*://*rezka*/series/*
 // @include         http*://hdrezka*/series/*
 // @include         http*://rezka*/series/*
@@ -24,7 +25,9 @@
 // @grant           GM_getResourceText
 // @resource        styles https://raw.githubusercontent.com/lyelly/HDrezkaGrid/refs/heads/main/styles.css
 // @resource        icons https://raw.githubusercontent.com/lyelly/HDrezkaGrid/refs/heads/main/icons.js
-// @version         1.0.0
+// @updateURL       https://raw.githubusercontent.com/lyelly/HDrezkaGrid/refs/heads/main/rezka-grid.user.js
+// @downloadURL     https://raw.githubusercontent.com/lyelly/HDrezkaGrid/refs/heads/main/rezka-grid.user.js
+// @version         1.0.1
 // @description     График рейтингов эпизодов для HDrezka (TVmaze/OMDb/Whatson/TMDB/SeriesGraph)
 // @run-at          document-end
 // ==/UserScript==
@@ -834,7 +837,7 @@
         <div class="ratings-wrapper">
           <h2 class="title" @click="toggleExpansion">
             График рейтингов эпизодов
-            <span class="toggle-icon" v-html="isExpanded ? icons.arrowUp : icons.arrowDown">
+            <span class="toggle-icon" v-html="isExpanded ? icons.chevronUp : icons.chevronDown">
             </span>
             <span class="info-icon" @click.stop="showInfoModal = true" v-html="icons.info">
             </span>
